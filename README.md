@@ -1,4 +1,4 @@
-# My Python repo
+# Scratch example of retrieving data from Airtable
 <!--- Adding a one-line description of what this repository is for here may be
 helpful -->
 <!---
@@ -51,15 +51,32 @@ For example, to run Python within the virtual environment, run
 uv run python
 ```
 
-As another example, to run a notebook server, run
+## Retrieving data from Airtable
+
+To retrieve data from Airtable, you will need to do three things:
+
+1. make sure your table is able to be accessed via the Airtable API
+   (as far as I can tell, this is the default)
+1. create an access token, 
+   instructions [here](https://airtable.com/developers/web/guides/personal-access-tokens)
+1. copy the `.env.sample` file to a file called `.env`,
+   then put your token in your newly created `.env` file
+
+To retrieve data from Airtable, use `retrieve-data.py`.
+By default, this retrieves data from an Airtable copy I made.
+You can change the Airtable base that is used via the `--base-id` argument.
+
+This base ID can be retrieved by looking at the Airtable URL,
+it's the bit after airtable.com
+(e.g. if you have a URL like
+`https://airtable.com/appZcrNbQmGILH4Sf/shrpGzK8pe44CCcAh/tbljoSaMlK7m0DunX`,
+your base ID is `appZcrNbQmGILH4Sf`).
+
+For more information, see https://support.airtable.com/v1/docs/finding-airtable-ids"""
 
 ```sh
-uv run jupyter lab
+uv run python retrieve-data.py --base-id [your-base-id-here]
 ```
-
-<!--- Other documentation and instructions can then be added here as you go,
-perhaps replacing the other instructions above as they may become redundant.
--->
 
 ## Development
 
