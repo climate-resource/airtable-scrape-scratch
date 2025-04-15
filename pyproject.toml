@@ -1,0 +1,47 @@
+[project]
+authors = [
+    { name = "Zebedee Nicholls", email = "zebedee.nicholls@climate-resource.com"},
+]
+requires-python = ">=3.9"
+dependencies = [
+    "pre-commit>=3.3.1",
+    "jupyterlab>=4.0.0",
+    "jupytext>=1.15.2",
+    "python-dotenv>=1.1.0",
+    "pandas>=2.2.3",
+    "pyairtable>=3.1.1",
+]
+name = "prototype"
+version = "0.1.0"
+description = "Scratch repository for experimenting with getting data from Airtable"
+readme = "README.md"
+
+[tool.uv]
+package = false
+
+[tool.jupytext]
+formats = "ipynb,py:percent"
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "W",
+    "F",
+    "I",
+    "D",
+    "PL",
+    "TRY",
+    "NPY",
+    "RUF",
+    "UP",
+    "S",
+]
+unfixable = [ ]
+ignore = [
+    "D200",
+    "D400",
+    "UP007",
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"

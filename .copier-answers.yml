@@ -1,0 +1,10 @@
+# Changes here will be overwritten by Copier
+_commit: v0.4.1
+_src_path: gl:openscm/copier-basic-python-repository
+email: zebedee.nicholls@climate-resource.com
+name: Zebedee Nicholls
+notebooks: true
+package_manager: uv
+project_description_short: Scratch repository for experimenting with getting data
+    from Airtable
+project_url: https://github.com/climate-resource/airtable-scrape-scratch
